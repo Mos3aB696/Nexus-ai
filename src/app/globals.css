@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --black-800: #010101;
+  --primary-color: #838384;
+  --linear-gradient-100: #8c8c8c;
+  --white: white;
+  --transparent: transparent;
+  --gray-100: #c2c6cb;
+  --orange: #e35f4f;
+  --gray: #6f7880;
+  --black: black;
+  --white-gray: #ffe6e0;
+  --white-gray-100: #ebf6ff;
+  --blue-300: #85a6c4;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background-color: var(--black-800);
+  color: var(--primary-color);
+  font-family: Inter Tight, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: var(--orange);
+}
+.main-background {
+  background: var(--orange);
+}
+.container {
+  z-index: 3;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1 {
+  background-image: linear-gradient(
+    90deg,
+    var(--linear-gradient-100),
+    var(--white) 50%,
+    var(--linear-gradient-100)
+  );
+  color: var(--white);
+  letter-spacing: -2.48px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 120%;
+}
+h2 {
+  background-image: linear-gradient(
+    90deg,
+    var(--linear-gradient-100),
+    var(--white) 50%,
+    var(--linear-gradient-100)
+  );
+  letter-spacing: -3.92px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Inter, sans-serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+h6 {
+  /* text-align: center; */
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+a {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  display: inline-block;
+}

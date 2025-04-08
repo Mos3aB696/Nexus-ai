@@ -1,0 +1,50 @@
+.button {
+  position: relative;
+  display: inline-block;
+  background-color: var(--orange);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+.button:hover .circle,
+.link:hover .circle {
+  animation: flash 1.2s infinite;
+}
+
+@keyframes flash {
+  0% {
+    background-color: var(--white);
+  }
+  25% {
+    background-color: var(--gray);
+  }
+  50% {
+    background-color: var(--black);
+  }
+  75% {
+    background-color: var(--gray);
+  }
+  100% {
+    background-color: var(--white);
+  }
+}

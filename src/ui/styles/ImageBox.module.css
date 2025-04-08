@@ -1,0 +1,38 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 532px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #ffffff4d;
+  border-radius: 16px;
+  overflow: hidden;
+  /* margin: 0 auto; */
+}
+
+.image {
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+  width: 100%; /* Ensure the image scales with the container */
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Maintain the aspect ratio of the image */
+}
+
+.link:hover .image {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: var(--white);
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.link:hover .title {
+  color: var(--orange);
+}

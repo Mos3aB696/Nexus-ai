@@ -1,0 +1,23 @@
+.sectionFigma {
+  padding: 140px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--orange);
+}
+
+.sectionFigma img {
+  width: 100%;
+  max-width: 80px;
+}
+.sectionFigma p {
+  text-align: center;
+  max-width: 603px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+}
