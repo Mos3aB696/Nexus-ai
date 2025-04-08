@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { signInWithGoogle } from "@/services/supabase";
+import supabase from "@/services/supabase";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [userName, setUserName] = useState(null); // State to store the user's name
 
   const navLinks = [
     { name: "Home", id: "home" },
@@ -34,6 +36,21 @@ const Navbar = () => {
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Listen for authentication state changes
+  useEffect(() => {
+    const { data: subscription } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        if (event === "SIGNED_IN" && session?.user) {
+          setUserName(session.user.user_metadata.full_name || "User");
+        } else if (event === "SIGNED_OUT") {
+          setUserName(null);
+        }
+      }
+    );
+
+    return () => subscription.unsubscribe();
   }, []);
 
   return (
@@ -66,14 +83,20 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          {/* Login Button - Desktop */}
+          {/* Login/User Button - Desktop */}
           <div className="hidden md:flex items-center">
-            <button
-              className="main-background text-white px-6 py-2 rounded-lg transition-colors text-sm font-medium cursor-pointer"
-              onClick={() => signInWithGoogle()}
-            >
-              Login
-            </button>
+            {userName ? (
+              <span className="text-white px-6 py-2 rounded-lg text-sm font-medium">
+                {userName}
+              </span>
+            ) : (
+              <button
+                className="main-background text-white px-6 py-2 rounded-lg transition-colors text-sm font-medium cursor-pointer"
+                onClick={() => signInWithGoogle()}
+              >
+                Login
+              </button>
+            )}
           </div>
           {/* Mobile Menu Button */}
           <button
@@ -117,9 +140,18 @@ const Navbar = () => {
                   {link.name}
                 </button>
               ))}
-              <button className="main-background text-white px-6 py-2 rounded-lg transition-colors text-sm font-medium w-full">
-                Login
-              </button>
+              {userName ? (
+                <span className="text-white px-6 py-2 rounded-lg text-sm font-medium">
+                  {userName}
+                </span>
+              ) : (
+                <button
+                  className="main-background text-white px-6 py-2 rounded-lg transition-colors text-sm font-medium w-full cursor-pointer"
+                  onClick={() => signInWithGoogle()}
+                >
+                  Login
+                </button>
+              )}
             </div>
           </motion.div>
         )}
