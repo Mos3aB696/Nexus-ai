@@ -21,7 +21,6 @@ export const signInWithGoogle = async () => {
 supabase.auth.onAuthStateChange((event, session) => {
   if (event === "SIGNED_IN") {
     console.log("User signed in:", session.user);
-    window.location.href = "https://nexus-ai-mu.vercel.app/";
   } else if (event === "SIGNED_OUT") {
     console.log("User signed out");
     // Handle sign-out actions
