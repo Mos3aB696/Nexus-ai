@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { signInWithGoogle } from "@/services/supabase";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,7 +68,10 @@ const Navbar = () => {
           </div>
           {/* Login Button - Desktop */}
           <div className="hidden md:flex items-center">
-            <button className="main-background text-white px-6 py-2 rounded-lg  transition-colors text-sm font-medium">
+            <button
+              className="main-background text-white px-6 py-2 rounded-lg transition-colors text-sm font-medium cursor-pointer"
+              onClick={() => signInWithGoogle()}
+            >
               Login
             </button>
           </div>
