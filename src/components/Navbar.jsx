@@ -44,6 +44,7 @@ const Navbar = () => {
       (event, session) => {
         if (event === "SIGNED_IN" && session?.user) {
           setUserName(session.user.user_metadata.full_name || "User");
+          // window.location.href = "https://nexus-ai-mu.vercel.app/";
         } else if (event === "SIGNED_OUT") {
           setUserName(null);
         }

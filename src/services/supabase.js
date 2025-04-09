@@ -10,19 +10,10 @@ export const signInWithGoogle = async () => {
   const { error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `${window.location.origin}/auth/callback`,
+      redirectTo: "https://nexus-ai-mu.vercel.app/",
     },
   });
   if (error) {
     console.error("Error signing in with Google:", error.message);
   }
 };
-
-supabase.auth.onAuthStateChange((event, session) => {
-  if (event === "SIGNED_IN") {
-    console.log("User signed in:", session.user);
-  } else if (event === "SIGNED_OUT") {
-    console.log("User signed out");
-    // Handle sign-out actions
-  }
-});
