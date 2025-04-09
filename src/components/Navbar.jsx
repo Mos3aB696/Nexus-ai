@@ -61,7 +61,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 py-5 transition-colors duration-300 ${
         isScrolled
-          ? "bg-black/80 backdrop-blur-md shadow-sm py-5"
+          ? "bg-black/60 backdrop-blur-md shadow-sm py-5"
           : "bg-transparent"
       }`}
     >
@@ -102,7 +102,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 cursor-pointer "
+            className="md:hidden p-2 rounded-lg text-gray-500 hover:bg-gray-100 cursor-pointer "
           >
             <svg
               className="w-6 h-6"
@@ -136,7 +136,7 @@ const Navbar = () => {
                 <button
                   key={link.id}
                   onClick={() => handleScroll(link.id)}
-                  className="links transition-colors font-medium cursor-pointer text-sm"
+                  className="links transition-colors font-medium cursor-pointer text-sm text-white"
                 >
                   {link.name}
                 </button>
