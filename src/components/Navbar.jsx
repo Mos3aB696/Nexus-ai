@@ -87,7 +87,7 @@ const Navbar = () => {
           {/* Login/User Button - Desktop */}
           <div className="hidden md:flex items-center">
             {userName ? (
-              <span className="text-white px-6 py-2 rounded-lg text-sm font-medium">
+              <span className="text-white px-6 py-2 rounded-lg text-sm font-medium logged-in">
                 {userName}
               </span>
             ) : (
@@ -142,7 +142,7 @@ const Navbar = () => {
                 </button>
               ))}
               {userName ? (
-                <span className="text-white px-6 py-2 rounded-lg text-sm font-medium">
+                <span className="text-white px-6 py-2 rounded-lg text-sm font-medium text-center logged-in">
                   {userName}
                 </span>
               ) : (

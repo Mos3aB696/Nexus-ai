@@ -106,3 +106,10 @@ img {
   max-width: 100%;
   display: inline-block;
 }
+
+.logged-in {
+  background: var(--white-gray);
+  color: var(--black);
+  padding: 10px;
+  border-radius: 5px;
+}
