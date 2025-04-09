@@ -19,7 +19,9 @@ function Footer() {
         </Button>
       </section>
       <footer className={styles.footerBottom}>
-        Design & Developed By Flownix - License | Powered By Webflow
+        Design & Developed By <span className={styles.footerBold}>Flownix</span>{" "}
+        - <span className={styles.footerBold}>License</span> | Powered By
+        <span className={styles.footerBold}> Webflow</span>
       </footer>{" "}
     </>
   );
