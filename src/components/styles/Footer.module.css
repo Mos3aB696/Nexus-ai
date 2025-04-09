@@ -1,11 +1,12 @@
 .footer {
-  padding: 100px 0px 16px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
   text-align: center;
+  padding-top: 100px;
+  padding-bottom: 16px;
 }
 
 .footer h2 {
@@ -19,7 +20,6 @@
   text-align: center;
   letter-spacing: -2.48px;
   max-width: 604px;
-  font-size: 62px;
   line-height: 120%;
 }
 

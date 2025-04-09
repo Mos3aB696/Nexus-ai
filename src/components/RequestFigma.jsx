@@ -2,7 +2,7 @@ import Button from "@/ui/Button";
 import styles from "./styles/RequestFigma.module.css";
 function RequestFigma() {
   return (
-    <section className={`${styles.sectionFigma}`}>
+    <section className={`${styles.sectionFigma} container`}>
       <img
         src="/icons/figma.webp"
         alt="figma icons"

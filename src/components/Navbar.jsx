@@ -136,7 +136,7 @@ const Navbar = () => {
                 <button
                   key={link.id}
                   onClick={() => handleScroll(link.id)}
-                  className="links transition-colors text-sm font-medium cursor-pointer"
+                  className="links transition-colors font-medium cursor-pointer text-sm"
                 >
                   {link.name}
                 </button>
