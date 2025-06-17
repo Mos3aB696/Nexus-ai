@@ -199,10 +199,6 @@ We welcome contributions! Please follow these steps:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## 🆘 Support
 
 - **Documentation**: Check the [Next.js Documentation](https://nextjs.org/docs)
@@ -218,11 +214,20 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
+## 📬 Contact
+
+**Mosaab Abdelkawy**
+
+- [Portfolio](https://mos3ab.tech)
+- [LinkedIn](https://www.linkedin.com/in/mosaab-abdelkawy/)
+- [YouTube](https://youtube.com/@tapseta)
+
+---
+
 <div align="center">
   <p>Built with ❤️ using Next.js and modern web technologies</p>
   <p>
-    <a href="https://webflow.com/templates/designers/flownix">Purchase Template</a> •
     <a href="mailto:support@flownix.co">Support</a> •
-    <a href="https://nexus-ai-mu.vercel.app/">Live Demo</a>
+    <a href="https://nexus-8jzu80f0i-mos3ab-projects.vercel.app/">Live Demo</a>
   </p>
 </div>
